@@ -14,7 +14,7 @@ public class Main {
               // Single console player start
 		        	Player player = new ConsolePlayer(new java.util.Scanner(System.in));
 		        	game.resetState();
-		        	player.play(game);  /
+		        	player.play(game);  
              // Single console player end
 /* 		    
               // For using RandomPlayer remove the single player code
