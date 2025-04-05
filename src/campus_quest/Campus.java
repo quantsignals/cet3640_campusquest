@@ -10,9 +10,9 @@ public class Campus {
     public final Map<String, Map<String, String>> map;
 
     public Campus() {
-    	String my_name = "Andreas";
-    	  this.map = getFroshLevelMap(my_name);
-        // this.map = getUpperLevelMap(my_name);
+    	String my_name = "Professor Rhode";
+    	this.map = getFroshLevelMap(my_name);
+        //this.map = getUpperLevelMap(my_name);
     }
 
     public Map<String, String> getDirectionsToRoomsMap(String room_name) {
@@ -32,16 +32,23 @@ public class Campus {
   
     @SuppressWarnings("unused") 
  	private Map<String, Map<String, String>> getFroshLevelMap(String name) {
+    	
+    	System.out.println("Loading map for: "+ name);
+		if(name.equals("Professor Rhode")) {
+			System.out.println("ERROR: UNABLE TO LOAD MAP, USE YOUR OWN NAME!");
+			return new HashMap<>();
+		}
+		
          Map<String, Map<String, String>> map = new LinkedHashMap<>();
 
          map.put("Dorm Room", Map.of(
-             "E", "Computer Lab" // go east (E) to get from the Dorm Room to the Computer Lab 
+             "E", "Computer Lab"
          ));
 
          map.put("Computer Lab", Map.of(
-             "W", "Dorm Room", // go west (W) to get from the Computer Lab to the Dorm Room
-             "E", "Cafeteria", // to east (E) to get from the Computer Lab to the Cafeteria
-             "item", "laptop"  // the Computer Lab contains the item: laptop
+             "W", "Dorm Room",
+             "E", "Cafeteria",
+             "item", "laptop"
          ));
 
          map.put("Cafeteria", Map.of(
@@ -52,19 +59,25 @@ public class Campus {
 
          map.put("Library", Map.of(
              "W", "Cafeteria",
+             // "E", "Classroom",
              "item", "notebook"
          ));
 
          map.put("Classroom", Map.of(
              "W", "Library"
          ));
-         System.out.println("Loading map for: "+ name);
+         
          return map;
      }
     
     @SuppressWarnings("unused")
     private static Map<String, Map<String, String>>  getUpperLevelMap(String name) {
-      // hidden map encoding
+    	
+    		System.out.println("Loading map for: "+ name);
+    		if(name.equals("Professor Rhode")) {
+    			System.out.println("ERROR: UNABLE TO LOAD MAP, USE YOUR OWN NAME!");
+    			return new HashMap<>();
+    		}	
     	
     		String list_binary = "rO0ABXNyABNqYXZhLnV0aWwuQXJyYXlMaXN0eIHSHZnHYZ0DAAFJAARzaXpleH"
     				+ "AAAAAIdwQAAAAIdAQkck8wQUJYTnlBQmRxWVhaaExuVjBhV3d1VEdsdWEyVmtTR0Z6YUUxaG"
