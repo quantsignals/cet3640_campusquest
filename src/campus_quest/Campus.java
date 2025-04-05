@@ -59,7 +59,6 @@ public class Campus {
 
          map.put("Library", Map.of(
              "W", "Cafeteria",
-             // "E", "Classroom",
              "item", "notebook"
          ));
 
