@@ -11,7 +11,7 @@ public class ConsolePlayer implements Player {
     @Override
     public void play(CampusQuest game) {
         while (!game.isOver()) {
-            System.out.println("You are in " + game.getLocation());
+            System.out.println("You are in " + game.getCurrentRoom());
             System.out.println("Available directions: " + game.getDirections());
             System.out.print("> ");
             String input = scanner.nextLine().trim().toUpperCase();
