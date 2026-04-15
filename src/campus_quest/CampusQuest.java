@@ -112,7 +112,7 @@ public class CampusQuest {
     public void hint() {
         System.out.println("Hint:");
         String loc = state.getCurrentRoom();
-        System.out.println("Your are at: "+loc);
-        // ADD CODE HERE TO PRINT OUT ThE ADJECENT DIRECTIONS AND ROOM NAMES
+        System.out.println("You are at: "+loc);
+        // ADD CODE HERE TO PRINT OUT THE ADJACENT DIRECTIONS AND ROOM NAMES
     }
 }
