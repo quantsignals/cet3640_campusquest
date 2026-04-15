@@ -25,7 +25,7 @@ public class Main {
 		        	// check game outcome
 		        	System.out.println(game.getOutcome());
 		        // end a loop 
-		        // report number of winning and loosing games	
+		        // report number of winning and losing games	
 */
 	}
 }
